@@ -1,0 +1,455 @@
+/* NAVBAR */
+body {
+    background-color: #D1E3DB;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #D1E3DB;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    margin-left: 90px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Menu Navigasi */
+nav {
+    display: flex;
+    gap: 24px;
+    margin-right: auto;
+    /* Menggeser menu navbar ke kiri setelah logo */
+    margin-left: 32px;
+    /* Jarak antara logo dan menu navbar */
+}
+
+/* Link Navbar */
+nav a,
+.dropdown button {
+    text-decoration: none;
+    color: #374151;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Login & Sign Up */
+.auth-links {
+    display: flex;
+    align-items: center;
+    /* Menjaga teks sejajar */
+    gap: 16px;
+    margin-right: 78px;
+    /* Jarak kanan sejajar dengan batas kiri logo */
+}
+
+.login {
+    color: #1A7449;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.signup {
+    background-color: #1A7449;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #374151;
+    gap: 10px; /* Jarak antara ikon */
+}
+
+.menu-toggle img {
+    width: 40px; /* Sesuaikan ukuran */
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links,
+    .auth-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #D1E3DB;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .nav-links.active,
+    .auth-links.active {
+        display: flex;
+    }
+
+    .nav-links a,
+    .auth-links a {
+        padding: 10px 0;
+        display: block;
+    }
+}
+
+
+/* FEATURED JOBS */
+.featured-jobs {
+    background-color: #fff;
+    padding: 80px 20px 20px;
+    /* Tambahkan padding atas, bukan margin */
+}
+
+.container {
+    width: 90% !important;
+    /* Dikurangi dari 80% menjadi 70% untuk mempersempit */
+    max-width: 1000px;
+    /* Menyesuaikan agar tidak terlalu lebar di layar besar */
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.highlight {
+    color: #2563eb;
+}
+
+.show-all {
+    color: #1A7449;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.show-all i {
+    margin-left: 8px;
+}
+
+.job-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+    border: 2px solid #d1d5db;
+    /* Warna border sama dengan border-gray-300 di Tailwind */
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+.job-details {
+    flex-grow: 1;
+}
+
+.job-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.company-location {
+    color: #1A7449;
+    margin-top: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tag {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 0;
+    border-radius: 10px;
+}
+
+.posted-date {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.job-actions {
+    text-align: right;
+}
+
+.apply-btn {
+    background-color: #1A7449;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #1A7449;
+}
+
+.progress {
+    margin-top: 12px;
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.progress-bar {
+    background-color: #e5e7eb;
+    width: 96px;
+    height: 10px;
+    border-radius: 0;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    background-color: #1A7449;
+    height: 10px;
+    border-radius: 0;
+}
+
+/* FOOTER */
+.footer-container {
+    background-color: #111827;
+    color: #d1d5db;
+}
+
+.footer {
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    font-size: 0.875rem;
+    max-width: 36ch;
+}
+
+.footer-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-left: 40px;
+}
+
+.footer-link a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-subscribe .subscribe-input {
+    background-color: #fff;
+    color: #374151;
+    border: 1px solid #374151;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe .subscribe-btn {
+    background-color: #1A7449;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.footer-subscribe .subscribe-btn:hover {
+    background-color: #145c38;
+}
+
+.footer-social a {
+    color: #6b7280;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #d1d5db;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+}
+
+.footer-social-icon {
+    color: #6b7280;
+    font-size: 1.25rem;
+}
+
+.footer-social-icon:hover {
+    color: #d1d5db;
+}
+
+
+/* RESPONSIVE FEATURED JOB */
+@media (max-width: 767px) {
+    .container {
+        width: 95% !important;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .company-logo {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .job-actions {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    .logo {
+        margin-left: 16px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .auth-links {
+        margin-right: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+.swiper {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.swiper-wrapper {
+    height: auto !important;
+    transition-timing-function: linear !important;
+    /* Perpindahan smooth */
+}
+
+.enlarge-img {
+    transform: scale(1.2); /* Perbesar gambar 20% */
+    transition: transform 0.3s ease-in-out;
+}
