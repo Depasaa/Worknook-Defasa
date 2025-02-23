@@ -1,3 +1,49 @@
+/* FONT CLASH DISPLAY */
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+        url('../fonts/ClashDisplay-Bold.ttf') format('truetype'),
+        url('../fonts/ClashDisplay-Bold.eot') format('eot');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+        url('../fonts/ClashDisplay-Medium.ttf') format('truetype'),
+        url('../fonts/ClashDisplay-Medium.eot') format('eot');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+        url('../fonts/ClashDisplay-Regular.ttf') format('truetype'),
+        url('../fonts/ClashDisplay-Regular.eot') format('eot');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+        url('../fonts/ClashDisplay-Semibold.ttf') format('truetype'),
+        url('../fonts/ClashDisplay-Semibold.eot') format('eot');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+
 /* NAVBAR */
 body {
     background-color: #D1E3DB;
@@ -10,39 +56,42 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 16px 124px;
+    /* Menyesuaikan batas kanan dan kiri */
     background-color: #D1E3DB;
     position: relative;
 }
 
-/* Logo */
 .logo {
-    margin-left: 90px;
+    margin-left: 0;
+    /* Tidak perlu karena sudah diatur di header */
 }
 
 .logo img {
-    height: 40px;
+    width: 144px;
 }
 
 /* Menu Navigasi */
 nav {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     margin-right: auto;
-    /* Menggeser menu navbar ke kiri setelah logo */
     margin-left: 32px;
-    /* Jarak antara logo dan menu navbar */
 }
 
 /* Link Navbar */
 nav a,
 .dropdown button {
     text-decoration: none;
-    color: #374151;
+    color: #535257;
     background: none;
     border: none;
     font-size: 16px;
     cursor: pointer;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 /* Dropdown */
@@ -67,27 +116,49 @@ nav a,
 
 /* Login & Sign Up */
 .auth-links {
-    display: flex;
-    align-items: center;
-    /* Menjaga teks sejajar */
-    gap: 16px;
-    margin-right: 78px;
-    /* Jarak kanan sejajar dengan batas kiri logo */
+    margin-right: 0;
+    /* Tidak perlu karena sudah diatur di header */
 }
 
+/* Login Button */
 .login {
     color: #1A7449;
-    font-weight: bold;
     text-decoration: none;
     font-size: 16px;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    /* Ukuran sesuai desain */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 50px;
+    padding: 12px 24px;
+    cursor: pointer;
 }
 
+/* Sign Up Button */
 .signup {
     background-color: #1A7449;
     color: white;
-    padding: 8px 16px;
     text-decoration: none;
     font-size: 16px;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    /* Ukuran sesuai desain */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    height: 50px;
+    padding: 12px 24px;
+    cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -98,20 +169,21 @@ nav a,
     font-size: 24px;
     cursor: pointer;
     color: #374151;
-    gap: 10px; /* Jarak antara ikon */
+    gap: 16px;
+    /* Jarak antara ikon */
 }
 
 .menu-toggle img {
-    width: 40px; /* Sesuaikan ukuran */
+    width: 40px;
     height: auto;
     cursor: pointer;
 }
 
-
 /* RESPONSIVE (Mobile) */
 @media (max-width: 768px) {
     header {
-        padding: 16px 20px;
+        padding: 16px;
+        /* Padding atas dan bawah sesuai desain */
     }
 
     .menu-toggle {
@@ -128,7 +200,8 @@ nav a,
         width: 100%;
         background: #D1E3DB;
         text-align: center;
-        padding: 16px 0;
+        padding: 16px;
+        /* Padding untuk keseluruhan menu */
     }
 
     .nav-links.active,
@@ -138,46 +211,426 @@ nav a,
 
     .nav-links a,
     .auth-links a {
-        padding: 10px 0;
+        padding: 16px 0;
+        /* Padding vertikal masing-masing link */
         display: block;
     }
 }
 
+/* HERO */
+.hero-container {
+    margin: 0 auto;
+    padding: 80px 124px;
+    text-align: left;
+    max-width: 1440px;
+    background-color: #D1E3DB;
+}
+
+.hero-text {
+    max-width: 818px;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 79.2px;
+    letter-spacing: 0;
+    color: #25324B;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    color: #456689;
+}
+
+.hero-description {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #6B6969;
+    max-width: 1005px;
+}
+
+.hero-search {
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.search-container {
+    background: #FFFFFF;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    max-width: 1192px;
+}
+
+.search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D1D5DB;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.dropdown-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.search-field,
+.location-field {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #202430;
+}
+
+.search-field::placeholder {
+    color: rgba(32, 36, 48, 0.5);
+}
+
+.search-btn {
+    background: #1A7449;
+    color: #FFFFFF;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 27px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.brand-section {
+    margin-top: 32px;
+}
+
+.brand-text {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28.8px;
+    color: #25324B;
+    opacity: 0.5;
+    margin-bottom: 24px;
+}
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 60px 40px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 72px !important;
+        line-height: 79.2px !important;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .search-container {
+        padding: 16px;
+    }
+
+    .brand-text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 32px 16px;
+    }
+
+    .hero-title {
+        font-size: 48px !important;
+        line-height: 40px!important;
+    }
+
+    .brand-logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Base CTA styles */
+.cta-container {
+    background-color: #1A7449;
+    width: 100%;
+    height: 478px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 64px 124px;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+}
+
+.cta-image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cta-image img {
+    width: 534px;
+    object-fit: cover;
+}
+
+.cta-text {
+    color: white;
+    width: 50%;
+    text-align: left;
+}
+
+.cta-title {
+    font-family: 'ClashDisplay', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.cta-description {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin-bottom: 32px;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #1A7449;
+    padding: 12px 24px;
+    border: none;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Specific tablet size (exactly 768px) */
+@media (width: 768px) {
+    .cta-container {
+        padding: 48px 40px;
+        height: 320px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-content {
+        gap: 16px;
+        height: 100%;
+    }
+
+    .cta-image {
+        width: 40%;
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+    }
+
+    .cta-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        vertical-align: bottom;
+    }
+
+    .cta-text {
+        width: 60%;
+        position: relative;
+        z-index: 1;
+        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 12px;
+    }
+
+    .cta-description {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile screens (767px and smaller) */
+@media (max-width: 767px) {
+    .cta-container {
+        background-color: #1A7449;
+        height: auto;
+        padding: 48px 16px;
+        width: 100%;
+    }
+
+    .cta-content {
+        display: block;
+    }
+
+    .cta-image {
+        display: none;
+    }
+
+    .cta-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .cta-title {
+        font-size: 32px;
+        line-height: 38.4px;
+        margin-bottom: 16px;
+    }
+
+    .cta-description {
+        font-size: 16px;
+        line-height: 25.6px;
+        margin-bottom: 24px;
+    }
+
+    .cta-button {
+        padding: 14px 24px;
+    }
+}
 
 /* FEATURED JOBS */
 .featured-jobs {
     background-color: #fff;
-    padding: 80px 20px 20px;
-    /* Tambahkan padding atas, bukan margin */
+    padding: 80px 0; /* Hanya padding atas-bawah */
 }
 
+@media (min-width: 1024px) {
+    .featured-jobs {
+        padding: 80px 0; /* Menghapus padding kanan-kiri */
+    }
+}
+
+/* CONTAINER */
 .container {
-    width: 90% !important;
-    /* Dikurangi dari 80% menjadi 70% untuk mempersempit */
-    max-width: 1000px;
-    /* Menyesuaikan agar tidak terlalu lebar di layar besar */
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 16px; /* Padding default untuk mobile dan tablet */
+    margin: 0 auto; /* Mengatur margin otomatis untuk pusat */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
 }
 
+@media (min-width: 768px) { /* Tablet */
+    .container {
+        padding: 0 16px; /* Padding untuk tablet */
+    }
+}
+
+@media (min-width: 1024px) { /* Desktop */
+    .container {
+        padding: 0 124px; /* Padding untuk desktop */
+    }
+}
+
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
-.title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1f2937;
+/* FEATURED TITLE */
+.featured-title {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 600;
+    font-size: 48px; /* Ukuran font sesuai Figma */
+    line-height: 52.8px; /* Line height sesuai Figma */
+    letter-spacing: 0%;
 }
 
-.highlight {
-    color: #2563eb;
+.featured-title span {
+    color: #456689;
 }
 
+/* SHOW ALL LINK */
 .show-all {
     color: #1A7449;
+    font-family: 'ClashDisplay', sans-serif;
     font-weight: 600;
     text-decoration: none;
 }
@@ -186,15 +639,14 @@ nav a,
     margin-left: 8px;
 }
 
+/* JOB CARD */
 .job-card {
     display: flex;
     background-color: #ffffff;
-    border-radius: 0;
     padding: 16px;
     margin-bottom: 16px;
     align-items: center;
     border: 2px solid #d1d5db;
-    /* Warna border sama dengan border-gray-300 di Tailwind */
 }
 
 .company-logo {
@@ -208,6 +660,7 @@ nav a,
 }
 
 .job-title {
+    font-family: 'ClashDisplay', sans-serif;
     font-size: 1.125rem;
     font-weight: 600;
     color: #1f2937;
@@ -230,7 +683,6 @@ nav a,
     font-size: 0.875rem;
     font-weight: 500;
     padding: 4px 8px;
-    border-radius: 0;
     border-radius: 10px;
 }
 
@@ -247,15 +699,15 @@ nav a,
 .apply-btn {
     background-color: #1A7449;
     color: white;
+    font-family: 'Epilogue', sans-serif;
     font-weight: 600;
     padding: 8px 16px;
-    border-radius: 0;
     border: none;
     cursor: pointer;
 }
 
 .apply-btn:hover {
-    background-color: #1A7449;
+    background-color: #136a3c;
 }
 
 .progress {
@@ -268,130 +720,19 @@ nav a,
     background-color: #e5e7eb;
     width: 96px;
     height: 10px;
-    border-radius: 0;
     margin-bottom: 8px;
 }
 
 .progress-fill {
     background-color: #1A7449;
     height: 10px;
-    border-radius: 0;
 }
-
-/* FOOTER */
-.footer-container {
-    background-color: #111827;
-    color: #d1d5db;
-}
-
-.footer {
-    padding: 3rem 0;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-logo img {
-    margin-bottom: 1rem;
-}
-
-.footer-logo p {
-    font-size: 0.875rem;
-    max-width: 36ch;
-}
-
-.footer-heading {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    margin-left: 40px;
-}
-
-.footer-link a {
-    color: #d1d5db;
-    text-decoration: none;
-    margin-left: 40px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    display: block;
-}
-
-.footer-link a:hover {
-    text-decoration: underline;
-}
-
-.footer-text {
-    margin-left: 40px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.footer-subscribe .subscribe-input {
-    background-color: #fff;
-    color: #374151;
-    border: 1px solid #374151;
-    outline: none;
-    padding: 12px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-subscribe .subscribe-btn {
-    background-color: #1A7449;
-    color: white;
-    cursor: pointer;
-    padding: 12px;
-    border: none;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.footer-subscribe .subscribe-btn:hover {
-    background-color: #145c38;
-}
-
-.footer-social a {
-    color: #6b7280;
-    transition: color 0.3s;
-}
-
-.footer-social a:hover {
-    color: #d1d5db;
-}
-
-.footer-bottom {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #374151;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-copy {
-    font-size: 0.875rem;
-}
-
-.footer-social-icon {
-    color: #6b7280;
-    font-size: 1.25rem;
-}
-
-.footer-social-icon:hover {
-    color: #d1d5db;
-}
-
 
 /* RESPONSIVE FEATURED JOB */
 @media (max-width: 767px) {
     .container {
-        width: 95% !important;
+        padding: 0 16px; /* Padding kiri dan kanan untuk mobile */
+        width: 100%; /* Memastikan lebar kontainer di mobile */
     }
 
     .job-card {
@@ -412,32 +753,363 @@ nav a,
     }
 }
 
-/* RESPONSIVE NAVBAR */
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 12px;
-    }
 
-    .logo {
-        margin-left: 16px;
-    }
+/* LATEST JOB OPEN */
+.latest-container {
+    width: 100%;
+    padding: 0 16px; /* Padding default untuk mobile */
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        margin-left: 0;
-        margin-top: 8px;
-    }
-
-    .auth-links {
-        margin-right: 16px;
-        flex-wrap: wrap;
+/* Media query untuk tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .latest-container {
+        padding: 0 16px; /* Memastikan tablet tetap 16px */
     }
 }
 
+/* Media query untuk desktop (1024px ke atas) */
+@media (min-width: 1024px) {
+    .latest-container {
+        padding: 0 124px; /* Padding untuk desktop */
+    }
+}
+
+.latest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.latest-title {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52.8px;
+    letter-spacing: 0%;
+}
+
+.latest-title .job-open {
+    font-family: 'ClashDisplay', sans-serif;
+    /* Menggunakan font Clash Display Semibold */
+    font-weight: 600;
+    /* Menjaga konsistensi dengan elemen lainnya */
+    font-size: 48px;
+    /* Menjaga ukuran font yang sama */
+    line-height: 52.8px;
+    /* Menjaga line-height yang sama */
+    letter-spacing: 0%;
+    /* Menjaga letter-spacing yang sama */
+    color: #456689;
+    /* Warna yang sama */
+}
+
+.latest-title .latest {
+    color: #25324B;
+}
+
+.latest-title .job-open {
+    color: #456689;
+}
+
+.show-all {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #047857;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+/* FOOTER */
+/* Desktop Footer (1440px) */
+.footer-container {
+    background-color: #111827;
+    padding: 64px 0;
+}
+
+.footer .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 124px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.footer-logo {
+    max-width: 280px;
+}
+
+.footer-logo img {
+    margin-bottom: 16px;
+}
+
+.footer-logo p {
+    color: #D1D5DB;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-links-container {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-heading {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.footer-link {
+    margin-bottom: 16px;
+}
+
+.footer-link a {
+    color: #D1D5DB;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-subscribe {
+    max-width: 280px;
+}
+
+.footer-text {
+    color: #D1D5DB;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: row; /* Sejajar pada desktop */
+    gap: 12px; /* Jarak antara input dan tombol */
+}
+
+.subscribe-input {
+    flex: 1; /* Membuat input mengambil sisa ruang yang tersedia */
+    padding: 12px;
+    background: #FFFFFF;
+    border: none;
+}
+
+.subscribe-btn {
+    padding: 12px;
+    background: #1A7449;
+    color: #FFFFFF;
+    border: none;
+    font-weight: 600;
+    min-width: 100px; /* Atur lebar minimum jika diperlukan */
+}
+
+.footer-bottom {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 24px;
+}
+
+/* Tablet Footer (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer .container {
+        padding: 0 40px;
+    }
+
+    .footer-content {
+        gap: 32px;
+    }
+
+    .footer-logo {
+        max-width: 220px;
+    }
+
+    .footer-links-container {
+        gap: 40px;
+    }
+
+    .footer-subscribe {
+        max-width: 240px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .footer-link {
+        margin-bottom: 12px;
+    }
+
+    .footer-link a {
+        font-size: 13px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        margin-top: 48px;
+        padding-top: 24px;
+    }
+
+    .footer-social {
+        gap: 20px;
+    }
+
+    /* Ubah subscribe-form menjadi kolom pada tablet */
+    .subscribe-form {
+        flex-direction: column; /* Ubah menjadi column untuk tablet */
+    }
+}
+
+/* Mobile Footer Styles (767px and below) */
+@media (max-width: 767px) {
+    .footer-container {
+        background-color: #111827;
+        padding: 48px 0;
+    }
+
+    .footer .container {
+        padding: 0 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .footer-logo {
+        max-width: 100%;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        margin-bottom: 16px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+        line-height: 22.4px;
+        color: #D1D5DB;
+    }
+
+    .footer-links-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    .footer-heading {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .footer-link {
+        margin-bottom: 16px;
+    }
+
+    .footer-link a {
+        color: #D1D5DB;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .footer-subscribe {
+        max-width: 100%;
+    }
+
+    .footer-text {
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .subscribe-input {
+        width: 343px;
+        padding: 16px;
+        background: #FFFFFF;
+        border: none;
+    }
+
+    .subscribe-btn {
+        width: 343px;
+        padding: 16px;
+        background: #1A7449;
+        color: #FFFFFF;
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid #374151;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .footer-copy {
+        color: #9CA3AF;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+/* Extra Small Devices (480px and below) */
+@media (max-width: 480px) {
+    .subscribe-input,
+    .subscribe-btn {
+        width: 100%; /* Mengatur lebar input dan tombol menjadi 100% */
+    }
+}
+
+/* --------------- CODE RESPONSIVE ON ALL LAYOUT --------------- */
 .swiper {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
@@ -450,6 +1122,140 @@ nav a,
 }
 
 .enlarge-img {
-    transform: scale(1.2); /* Perbesar gambar 20% */
+    transform: scale(1.2);
+    /* Perbesar gambar 20% */
     transition: transform 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+        /* Lebih kecil agar tidak kepanjangan di layar kecil */
+    }
+
+    .text-left p {
+        font-size: 1rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .search-bar button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .brand-logos {
+        gap: 5px;
+        justify-content: center;
+    }
+}
+
+/* EXPLORE SECTION */
+.explore-section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+}
+
+.explore-container {
+    max-width: 1192px;
+    margin: 0 auto;
+    padding: 0 124px;
+}
+
+.explore-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.explore-title {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52.8px;
+    color: #25324B;
+}
+
+.explore-title span {
+    color: #456689;
+}
+
+.show-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #047857;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.explore-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.explore-card {
+    border: 1px solid #E5E7EB;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-icon {
+    background-color: #F3F4F6;
+    height: 194px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-icon {
+    width: 88px;
+    height: 88px;
+}
+
+.card-content {
+    padding: 24px 32px;
+}
+
+.card-content h2 {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #25324B;
+    margin-bottom: 12px;
+}
+
+.jobs-available {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobs-available span {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    color: #6B6969;
+}
+
+/* Navigation */
+.explore-navigation {
+    display: none;
 }

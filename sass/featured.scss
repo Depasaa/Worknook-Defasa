@@ -1,0 +1,132 @@
+$primary-color: #1A7449;
+$secondary-color: #1f2937;
+$highlight-color: #2563eb;
+$background-color: #fff;
+$border-color: #d1d5db;
+$text-gray: #6b7280;
+$tag-bg: #f3f4f6;
+$progress-bg: #e5e7eb;
+
+.featured-jobs {
+    background-color: $background-color;
+    padding: 80px 20px 20px;
+}
+
+.container {
+    width: 90% !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $secondary-color;
+}
+
+.highlight {
+    color: $highlight-color;
+}
+
+.show-all {
+    color: $primary-color;
+    font-weight: 600;
+    text-decoration: none;
+    i {
+        margin-left: 8px;
+    }
+}
+
+.job-card {
+    display: flex;
+    background-color: $background-color;
+    border-radius: 0;
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+    border: 2px solid $border-color;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+.job-details {
+    flex-grow: 1;
+    .job-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+    .company-location {
+        color: $primary-color;
+        margin-top: 8px;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tag {
+    background-color: $tag-bg;
+    color: $secondary-color;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.posted-date {
+    color: $text-gray;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.job-actions {
+    text-align: right;
+}
+
+.apply-btn {
+    background-color: $primary-color;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.progress {
+    margin-top: 12px;
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.progress-bar {
+    background-color: $progress-bg;
+    width: 96px;
+    height: 10px;
+    border-radius: 0;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    background-color: $primary-color;
+    height: 10px;
+    border-radius: 0;
+}

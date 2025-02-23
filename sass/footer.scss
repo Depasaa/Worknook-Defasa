@@ -1,0 +1,115 @@
+$footer-bg: #111827;
+$footer-text: #d1d5db;
+$footer-border: #374151;
+$footer-btn-bg: #1A7449;
+$footer-btn-hover: #145c38;
+$social-icon: #6b7280;
+$social-icon-hover: #d1d5db;
+
+.footer-container {
+    background-color: $footer-bg;
+    color: $footer-text;
+}
+
+.footer {
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    img {
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 0.875rem;
+        max-width: 36ch;
+    }
+}
+
+.footer-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-left: 40px;
+}
+
+.footer-link {
+    a {
+        color: $footer-text;
+        text-decoration: none;
+        margin-left: 40px;
+        margin: 25px 0;
+        display: block;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-text {
+    margin-left: 40px;
+    margin: 25px 0;
+}
+
+.footer-subscribe {
+    .subscribe-input {
+        background-color: #fff;
+        color: $footer-border;
+        border: 1px solid $footer-border;
+        outline: none;
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .subscribe-btn {
+        background-color: $footer-btn-bg;
+        color: white;
+        cursor: pointer;
+        padding: 12px;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        &:hover {
+            background-color: $footer-btn-hover;
+        }
+    }
+}
+
+.footer-social {
+    a {
+        color: $social-icon;
+        transition: color 0.3s;
+        &:hover {
+            color: $social-icon-hover;
+        }
+    }
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid $footer-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+}
+
+.footer-social-icon {
+    color: $social-icon;
+    font-size: 1.25rem;
+    &:hover {
+        color: $social-icon-hover;
+    }
+}

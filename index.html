@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fonts/clash-display.css">
 </head>
 
 <!-- NAVBAR -->
@@ -22,7 +28,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="img/worknook.png" alt="Worknook logo" width="150">
+            <img src="img/svg/Worknook1.svg" alt="Worknook logo" width="150">
         </div>
 
         <button class="menu-toggle">
@@ -63,318 +69,407 @@
 
 
     <!-- HERO -->
-    <main class="container mx-auto px-4 py-10 mt-20">
-        <div class="text-left max-w-3xl">
-            <h1 class="text-7xl font-bold leading-tight"
-                style="color: #25324B; font-family: 'Clash Display', sans-serif;">Discover more than</h1>
-            <h2 class="text-7xl font-bold leading-tight"
-                style="color: #456689; font-family: 'Clash Display', sans-serif;">5000+ Jobs</h2>
-            <p class="text-gray-600 mt-4 text-lg">Explore all the most exciting job roles based on your interest and
-                study major.</p>
+    <main class="hero-container">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                Discover more than <span class="hero-subtitle">5000+ Jobs</span>
+            </h1>
+            <p class="hero-description">Explore all the most exciting job roles based on your interest and study major.
+            </p>
         </div>
 
-
-        <div class="flex justify-center mt-10">
-            <div class="bg-white p-4 rounded-none flex items-center space-x-4 w-full max-w-9xl">
-                <div class="flex items-center border-b border-gray-300 flex-grow">
-                    <i class="fas fa-search text-gray-400 mr-2"></i>
-                    <input type="text" placeholder="Job title or keyword" class="w-full py-2 px-2 focus:outline-none">
+        <div class="hero-search">
+            <div class="search-container">
+                <div class="search-input">
+                    <img src="img/svg/Search.svg" alt="Search" class="search-icon">
+                    <input type="text" placeholder="Job title or keyword" class="search-field"> <!-- Input Pencarian -->
                 </div>
-                <div class="flex items-center border-b border-gray-300 flex-grow">
-                    <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
-                    <input type="text" value="Florence, Italy" class="w-full py-2 px-2 focus:outline-none">
-                    <i class="fas fa-chevron-down text-gray-400 ml-2"></i>
+                <div class="search-input">
+                    <img src="img/svg/Location.svg" alt="Location" class="search-icon">
+                    <input type="text" value="Florence, Italy" class="location-field"> <!-- Input Lokasi -->
                 </div>
-                <button class="text-white py-2 px-4 rounded-none" style="background-color: #1A7449;">Search my
-                    job</button>
+                <button class="search-btn">Search my job</button>
             </div>
         </div>
 
         <!-- Brand Logo Section -->
-        <div class="mt-10 text-left mb-8">
-            <p class="text-gray-600">Trusted by leading brands and startups</p>
-            <div class="flex flex-wrap gap-10 mt-9">
-                <img src="img/svg/vodafone-2017-logo.svg" alt="Vodafone logo" class="h-5">
-                <img src="img/svg/intel-3.svg" alt="Intel logo" class="h-5">
-                <img src="img/svg/tesla-9 1.svg" alt="Tesla logo" class="h-5">
-                <img src="img/svg/amd-logo-1.svg" alt="AMD logo" class="h-5">
-                <img src="img/svg/talkit 1.svg" alt="Talkit logo" class="h-5">
+        <div class="brand-section">
+            <p class="brand-text">Trusted by Leading brands and startup</p>
+            <div class="brand-logos">
+                <img src="img/svg/vodafone-2017-logo.svg" alt="Vodafone" class="brand-logo vodafone">
+                <img src="img/svg/intel-3.svg" alt="Intel" class="brand-logo intel">
+                <img src="img/svg/tesla-9 1.svg" alt="Tesla" class="brand-logo tesla">
+                <img src="img/svg/amd-logo-1.svg" alt="AMD" class="brand-logo amd">
+                <img src="img/svg/talkit 1.svg" alt="Talkit" class="brand-logo talkit">
             </div>
         </div>
     </main>
 
-    <!-- EXPLORE -->
-    <div class="bg-white">
-        <div class="container mx-auto px-4 py-20">
-            <div class="flex justify-between items-center mb-6">
-                <h1 class="text-5xl font-bold text-[#25324B]" style="font-family: 'Clash Display', sans-serif;">
-                    Explore by <span class="text-[#456689]">category</span>
-                </h1>
-                <a class="show-all text-green-700 font-semibold no-underline flex items-center" href="#">
-                    Show all jobs
-                    <i class="ml-2">→</i>
-                </a>
-            </div>
 
-            <div class="relative">
-                <div class="overflow-hidden">
-                    <div id="carousel" class="flex transition-transform duration-500">
-                        <!-- Semua Card Dimasukkan dalam Slide -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 flex-shrink-0 w-full">
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Design.svg" alt="Design Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Design</h2>
-                                    <p>235 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Sales.svg" alt="Sales Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Sales</h2>
-                                    <p>756 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Marketing.svg" alt="Marketing Icon"
-                                        class="w-16 h-16 transition duration-300 invert sepia-[50%] saturate-[500%] hue-rotate-[90deg] brightness-[80%] contrast-[90%] group-hover:invert-0 group-hover:sepia-0 group-hover:saturate-100 group-hover:hue-rotate-0 group-hover:brightness-100 group-hover:contrast-100">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Marketing</h2>
-                                    <p>140 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-[#1A7449] transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
+<!-- EXPLORE -->
+<section class="bg-white w-full relative pb-[72px]">
+    <div class="hero-container bg-white">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-5xl font-bold text-[#25324B] mt-[72px] md:text-5xl sm:text-3xl"
+                style="font-family: 'ClashDisplay', sans-serif; font-weight: 600;">
+                Explore by <span class="text-[#456689]">category</span>
+            </h1>
+            <a class="show-all flex items-center text-[#047857] font-semibold text-[16px] leading-[25.6px] tracking-[0%] text-center mt-[72px]"
+                href="#">
+                Show all jobs
+                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="arrow-icon ml-[8px] w-[24px] h-[24px]">
+            </a>
+        </div>
 
-
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Finance.svg" alt="Finance Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Finance</h2>
-                                    <p>325 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="relative overflow-hidden">
+            <div id="carousel" class="flex transition-transform duration-500 gap-8">
+                <!-- Card 1 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Design.svg" alt="Design Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 flex-shrink-0 w-full">
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Tech.svg" alt="Design Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Technology</h2>
-                                    <p>436 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Engineering.svg" alt="Sales Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Engineering</h2>
-                                    <p>325 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div class=" p-6 flex justify-center items-center py-24 bg-gray-200 transition
-                           duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/Business.svg" alt="Sales Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Business</h2>
-                                    <p>325 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Card -->
-                            <div
-                                class="group bg-white rounded-none overflow-hidden h-100 border-2 border-gray-200 transition duration-300 hover:bg-[#1A7449] hover:text-white w-full">
-                                <div
-                                    class="p-6 flex justify-center items-center py-24 bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
-                                    <img src="img/svg/HR.svg" alt="Finance Icon"
-                                        class="w-16 h-16 transition duration-300 group-hover:brightness-0 group-hover:invert">
-                                </div>
-                                <div class="p-6 text-gray-800 transition duration-300 group-hover:text-white">
-                                    <h2 class="text-xl font-bold">Human Resources</h2>
-                                    <p>325 jobs available</p>
-                                    <div class="flex justify-end">
-                                        <i
-                                            class="fas fa-arrow-right text-gray-600 transition duration-300 group-hover:text-white"></i>
-                                    </div>
-                                </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Design
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    235 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Navigasi -->
-                <div class="flex justify-center mt-8">
-                    <button id="prevBtn"
-                        class="group bg-white border border-[#1A7449] text-[#1A7449] rounded-none p-4 mx-2 flex items-center justify-center transition duration-300 hover:bg-[#1A7449] hover:text-white">
-                        <i class="fas fa-arrow-left text-1xl transition duration-300 group-hover:text-white"></i>
-                    </button>
-                    <button id="nextBtn"
-                        class="group bg-white border border-[#1A7449] text-[#1A7449] rounded-none p-4 mx-2 flex items-center justify-center transition duration-300 hover:bg-[#1A7449] hover:text-white">
-                        <i class="fas fa-arrow-right text-1xl transition duration-300 group-hover:text-white"></i>
-                    </button>
+                <!-- Card 2 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Sales.svg" alt="Sales Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Sales
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    756 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Card 3 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Marketing.svg" alt="Marketing Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Marketing
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    140 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Finance.svg" alt="Finance Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Finance
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    325 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Tech.svg" alt="Technology Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Technology
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    436 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Engineering.svg" alt="Engineering Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Engineering
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    325 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/Business.svg" alt="Business Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                Business
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    325 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="flex-shrink-0 w-[274px]">
+                    <div class="group bg-white rounded-none overflow-hidden w-[274px] h-[328px] border border-gray-200 transition duration-300 hover:bg-[#1A7449]">
+                        <div class="w-[274px] h-[194px] p-[32px] flex justify-center items-center bg-gray-200 transition duration-300 group-hover:bg-[#1A7449]">
+                            <img src="img/svg/HR.svg" alt="Human Resources Icon" class="w-[88px] h-[88px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+                        </div>
+                        <div class="px-[32px] py-6 text-gray-800 transition duration-300 group-hover:text-white flex flex-col justify-start h-[50%]">
+                            <h2 class="text-xl" style="font-family: 'ClashDisplay', sans-serif; font-weight: 600; font-size: 24px; line-height: 28.8px; letter-spacing: 0%; width: 210px; height: 29px;">
+                                HR
+                            </h2>
+                            <div class="flex items-center justify-between w-full mt-[12px]">
+                                <p class="font-epilogue font-normal text-[18px] leading-[28.8px] tracking-normal text-[#6B6969] group-hover:text-white transition duration-300">
+                                    325 jobs available
+                                </p>
+                                <img src="img/svg/Arrow Right.svg" alt="Arrow Icon" class="w-[24px] h-[24px] transition duration-300 group-hover:invert">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Navigation buttons -->
+        <div class="flex justify-center mt-12 gap-[8px]">
+            <button id="prevBtn"
+                class="group bg-white border border-[#98C0AD] rounded-none w-[48px] h-[50px] p-[12px] flex items-center justify-center transition duration-300 hover:bg-[#1A7449] hover:border-[#1A7449]">
+                <img src="img/svg/Arrow Left Explore.svg" alt="Previous"
+                    class="w-[26px] h-[26px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+            </button>
+            <button id="nextBtn"
+                class="group bg-white border border-[#98C0AD] rounded-none w-[48px] h-[50px] p-[12px] flex items-center justify-center transition duration-300 hover:bg-[#1A7449] hover:border-[#1A7449]">
+                <img src="img/svg/Arrow Right Explore.svg" alt="Next"
+                    class="w-[26px] h-[26px] transition duration-300 group-hover:brightness-0 group-hover:invert">
+            </button>
+        </div>
     </div>
+</section>
 
-    <script>
-        const carousel = document.getElementById('carousel');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let index = 0;
+<style>
+    .hero-container {
+        margin-top: 5rem;
+        padding: 0 1rem;
+        text-align: left;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        nextBtn.addEventListener('click', () => {
-            if (index < 1) { // Sesuaikan dengan jumlah slide - 1
-                index++;
-                updateCarousel();
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                updateCarousel();
-            }
-        });
-
-        function updateCarousel() {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
+    @media (min-width: 1024px) {
+        .hero-container {
+            padding: 0 124px;
         }
-        let slidesPerView = 4; // Default 4 card per slide
+    }
 
-        // Ubah manual sesuai ukuran layar
-        if (window.innerWidth <= 425) {
-            slidesPerView = 1; // Mobile
+    /* Add these styles for better centering on mobile and tablet */
+    @media (max-width: 425px) {
+        #carousel {
+            padding-left: calc(50% - 137px - 16px);
+            padding-right: 96px;
+            /* Significantly increased right padding */
+        }
+    }
+
+    @media (max-width: 375px) {
+        #carousel {
+            padding-left: calc(50% - 137px - 32px);
+            padding-right: 48px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        #carousel {
+            padding-left: calc(50% - 290px);
+            padding-right: 48px;
+            gap: 16px;
+        }
+    }
+
+    /* Mengatur tinggi untuk space kosong */
+    .h-18 {
+        height: 72px;
+        /* 72px space */
+    }
+
+    @media (max-width: 425px) {
+        .text-5xl {
+            font-size: 1.875rem;
+            /* 30px */
+            line-height: 2.25rem;
+            /* 36px */
+        }
+    }
+
+    @media (max-width: 375px) {
+        .text-5xl {
+            font-size: 1.5rem;
+            /* 24px */
+            line-height: 2rem;
+            /* 32px */
+        }
+    }
+</style>
+
+<script>
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    // Duplikat card untuk efek looping
+    const cards = document.querySelectorAll('#carousel > div');
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+
+    function updateCarouselView() {
+        let slidesPerView = 4; // Default for desktop
+        let slideWidth = 274; // Single card width
+        let gap = 35; // Updated gap to 32px
+
+        if (window.innerWidth <= 375) {
+            slidesPerView = 1;
+        } else if (window.innerWidth <= 425) {
+            slidesPerView = 1;
+            gap = 96; // Much larger gap for 425px
         } else if (window.innerWidth <= 768) {
-            slidesPerView = 2; // Tablet
+            slidesPerView = 2;
+        }
+
+        return { slidesPerView, slideWidth, gap };
+    }
+
+    function updateCarousel() {
+        const { slidesPerView, slideWidth, gap } = updateCarouselView();
+        const totalCards = document.querySelectorAll('#carousel > div').length;
+        const maxIndex = totalCards - slidesPerView;
+
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+        let moveAmount = currentIndex * (slideWidth + gap);
+
+        carousel.style.transform = `translateX(-${moveAmount}px)`;
+    }
+
+    // Navigation buttons
+    nextBtn.addEventListener('click', () => {
+        const { slidesPerView } = updateCarouselView();
+        const totalCards = document.querySelectorAll('#carousel > div').length;
+        const maxIndex = totalCards - slidesPerView;
+
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
         } else {
-            slidesPerView = 4; // Desktop
+            currentIndex = 0; // Loop back to the start
+            updateCarousel();
         }
-    </script>
+    });
 
-    <style>
-        .nav-btn {
-            background: white;
-            border: 2px solid #1A7449;
-            color: #1A7449;
-            padding: 10px;
-            margin: 0 10px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    prevBtn.addEventListener('click', () => {
+        const { slidesPerView } = updateCarouselView();
+        const totalCards = document.querySelectorAll('#carousel > div').length;
+        const maxIndex = totalCards - slidesPerView;
 
-        .nav-btn:hover {
-            background: #1A7449;
-            color: white;
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        } else {
+            currentIndex = maxIndex; // Go to the last card
+            updateCarousel();
         }
-    </style>
+    });
+
+    // Update on window resize
+    window.addEventListener('resize', updateCarousel);
+
+    // Initial setup
+    updateCarousel();
+</script>
+
+
 
     <!-- CTA -->
-    <div class="bg-cover bg-center flex items-center justify-center py-12"
-        style="background-image: url('img/backgroundcta.jpg');">
-        <div class="container px-4 flex flex-col md:flex-row items-center">
-            <!-- Elemen Gambar -->
-            <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0 hidden md:block">
-                <img src="img/corporate.png"
-                    alt="Seorang pria dengan kemeja putih dan dasi hitam memegang laptop, tersenyum percaya diri"
-                    class="w-64 h-auto md:w-80 lg:w-96 enlarge-img">
-
+    <div class="cta-container">
+        <div class="cta-content">
+            <div class="cta-image">
+                <img src="img/fotoorangkantor.png" alt="Office Worker">
             </div>
-            <!-- Elemen Teks -->
-            <div class="w-full md:w-1/2 text-white text-left mt-6 md:mt-0">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                    Take the first step towards finding your ideal candidate
-                </h1>
-                <p class="text-base md:text-lg mb-6">
-                    Start posting jobs for only $10.
-                </p>
-                <button class="bg-white text-[#1A7449] font-semibold py-2 px-6 rounded-none">
-                    Sign Up For Free
-                </button>
+            <div class="cta-text">
+                <h1 class="cta-title">Take the first step towards finding your ideal candidate</h1>
+                <p class="cta-description">Start posting jobs for only $10.</p>
+                <button class="cta-button">Sign Up For Free</button>
             </div>
         </div>
     </div>
 
-
-
-
-
-    <!-- FEATURED JOB-->
+    <!-- FEATURED JOB -->
     <div class="featured-jobs">
         <div class="container">
             <div class="header">
-                <h1 class="text-5xl font-bold text-[#25324B]" style="font-family: 'Clash Display', sans-serif;">
-                    Featured <span class="text-[#456689]">jobs</span>
+                <h1 class="featured-title">
+                    Featured <span>jobs</span>
                 </h1>
-                <a class="show-all text-green-700 font-semibold no-underline flex items-center" href="#">
+                <a class="show-all" href="#">
                     Show all jobs
-                    <i class="ml-2">→</i>
+                    <img src="img/svg/Arrow Right.svg" alt="Arrow" class="arrow-icon">
                 </a>
             </div>
 
@@ -452,24 +547,26 @@
         </div>
     </div>
 
+
     <!-- LATEST JOB -->
     <div class="bg-white py-10">
         <!-- Container hanya untuk section h1 -->
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-6">
-                <h1 class="text-5xl font-bold text-[#25324B]" style="font-family: 'Clash Display', sans-serif;">
-                    Latest jobs <span class="text-[#456689]">open</span>
-                </h1>
-                <a class="show-all text-green-700 font-semibold no-underline flex items-center" href="#">
+        <div class="latest-container">
+            <div class="latest-header">
+                <div class="latest-title">
+                    <span class="latest">Latest</span>
+                    <span class="job-open">job open</span>
+                </div>
+                <a class="show-all" href="#">
                     Show all jobs
-                    <i class="ml-2">→</i>
+                    <img src="img/svg/Arrow Right.svg" alt="Arrow Right" class="arrow-icon">
                 </a>
             </div>
         </div>
 
         <!-- Swiper Container (tanpa container) -->
         <div class="swiper mySwiper1 w-full mt-6 mb-0">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper space-x-2 mb-3">
                 <!-- Job Cards -->
                 <div
                     class="swiper-slide bg-white p-4 rounded-none border-2 border-gray-300 min-h-[250px] h-auto flex flex-col justify-between">
@@ -556,7 +653,7 @@
 
         <!-- Swiper Container for Second Row -->
         <div class="swiper mySwiper2 mt-6 mb-0">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper space-x-2 mb-14">
                 <!-- Job Cards - Second Row -->
                 <div class="swiper-slide bg-white p-4 border-2 border-gray-300 h-[250px] flex flex-col justify-between">
                     <div class="flex justify-between items-center mb-2">
@@ -720,99 +817,74 @@
     </script>
 
 
-    <!-- FOOTER -->
-    <div class="footer-container">
-        <footer class="footer py-12">
-            <div class="container mx-auto px-4">
-                <div class="footer-content flex flex-wrap justify-between">
-                    <div class="footer-logo w-full md:w-1/4 mb-6 md:mb-0">
-                        <img alt="Worknook logo" class="mb-4" height="40" src="img/worknook2.png" width="150" />
-                        <p>
-                            Great platform for the job seeker that passionate about startups. Find your dream job
-                            easier.
-                        </p>
-                    </div>
-                    <div class="footer-about w-full md:w-1/4 mb-6 md:mb-0">
-                        <h3 class="footer-heading">
-                            About
-                        </h3>
+  <!-- FOOTER -->
+  <div class="footer-container">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/worknook2.png" alt="Worknook logo" width="150" height="40" class="mb-4" />
+                    <p>Great platform for the job seeker that passionate about startups. Find your dream job easier.</p>
+                </div>
+                
+                <!-- New wrapper div for About and Resources -->
+                <div class="footer-links-container">
+                    <div class="footer-about">
+                        <h3 class="footer-heading">About</h3>
                         <ul>
-                            <li class="footer-link mb-2">
-                                <a href="#">Companies</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Pricing</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Terms</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Advice</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Privacy Policy</a>
-                            </li>
+                            <li class="footer-link"><a href="#">Companies</a></li>
+                            <li class="footer-link"><a href="#">Pricing</a></li>
+                            <li class="footer-link"><a href="#">Terms</a></li>
+                            <li class="footer-link"><a href="#">Advice</a></li>
+                            <li class="footer-link"><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>
-                    <div class="footer-resources w-full md:w-1/4 mb-6 md:mb-0">
-                        <h3 class="footer-heading">
-                            Resources
-                        </h3>
+
+                    <div class="footer-resources">
+                        <h3 class="footer-heading">Resources</h3>
                         <ul>
-                            <li class="footer-link mb-2">
-                                <a href="#">Help Docs</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Guide</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Updates</a>
-                            </li>
-                            <li class="footer-link mb-2">
-                                <a href="#">Contact Us</a>
-                            </li>
+                            <li class="footer-link"><a href="#">Help Docs</a></li>
+                            <li class="footer-link"><a href="#">Guide</a></li>
+                            <li class="footer-link"><a href="#">Updates</a></li>
+                            <li class="footer-link"><a href="#">Contact Us</a></li>
                         </ul>
-                    </div>
-                    <div class="footer-subscribe w-full md:w-1/4">
-                        <h3 class="footer-heading">
-                            Get job notifications
-                        </h3>
-                        <p class="footer-text mb-4">
-                            The latest job news, articles, sent to your inbox weekly.
-                        </p>
-                        <form class="footer-subscribe subscribe-form">
-                            <input class="subscribe-input" placeholder="Email Address" type="email" />
-                            <button class="subscribe-btn">Subscribe</button>
-                        </form>
-
-
                     </div>
                 </div>
-                <div class="footer-bottom mt-8 border-t pt-4 flex flex-wrap justify-between items-center">
-                    <p class="footer-copy text-sm mt-7">
-                        © 2021 @ Worknook. All rights reserved.
-                    </p>
-                    <div class="footer-social flex space-x-5 mt-7">
-                        <a href="#" class="footer-social-icon">
-                            <img src="img/svg/Facebook.svg" alt="Facebook" class="w-8 h-8">
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <img src="img/svg/Instagram.svg" alt="Instagram" class="w-8 h-8">
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <img src="img/svg/Dribbble.svg" alt="LinkedIn" class="w-8 h-8">
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <img src="img/svg/LinkedIn.svg" alt="LinkedIn" class="w-8 h-8">
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <img src="img/svg/Twitter.svg" alt="Twitter" class="w-8 h-8">
-                        </a>
-                    </div>
+
+                <div class="footer-subscribe">
+                    <h3 class="footer-heading">Get job notifications</h3>
+                    <p class="footer-text">The latest job news, articles, sent to your inbox weekly.</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Email Address" />
+                        <button class="subscribe-btn">Subscribe</button>
+                    </form>
                 </div>
             </div>
-        </footer>
-    </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2021 @ Worknook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-icon">
+                        <img src="img/svg/Facebook.svg" alt="Facebook" class="w-8 h-8">
+                    </a>
+                    <a href="#" class="footer-social-icon">
+                        <img src="img/svg/Instagram.svg" alt="Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="#" class="footer-social-icon">
+                        <img src="img/svg/Dribbble.svg" alt="Dribbble" class="w-8 h-8">
+                    </a>
+                    <a href="#" class="footer-social-icon">
+                        <img src="img/svg/LinkedIn.svg" alt="LinkedIn" class="w-8 h-8">
+                    </a>
+                    <a href="#" class="footer-social-icon">
+                        <img src="img/svg/Twitter.svg" alt="Twitter" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
 </body>
 
 </html>

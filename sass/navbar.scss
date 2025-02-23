@@ -1,0 +1,139 @@
+/* NAVBAR */
+$bg-color: #D1E3DB;
+$text-color: #374151;
+$primary-color: #1A7449;
+
+body {
+    background-color: $bg-color;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: $bg-color;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    margin-left: 90px;
+    img {
+        height: 40px;
+    }
+}
+
+/* Menu Navigasi */
+nav {
+    display: flex;
+    gap: 24px;
+    margin-right: auto;
+    margin-left: 32px;
+
+    a,
+    .dropdown button {
+        text-decoration: none;
+        color: $text-color;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    
+    &-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    &:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Login & Sign Up */
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 78px;
+
+    .login {
+        color: $primary-color;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .signup {
+        background-color: $primary-color;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: $text-color;
+    gap: 10px;
+    
+    img {
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links,
+    .auth-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $bg-color;
+        text-align: center;
+        padding: 16px 0;
+
+        &.active {
+            display: flex;
+        }
+
+        a {
+            padding: 10px 0;
+            display: block;
+        }
+    }
+}
